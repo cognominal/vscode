@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "quickpick menus",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "I am exploring how Quickpick menus to program my 'shortcut extension', the goal is to create a provider that find the shortcut for each command in the shortcut menu for a given categoty\n"
+    },
+    {
+      "file": "src/vs/workbench/contrib/quickaccess/browser/quickAccess.contribution.ts",
+      "description": "From the quickpick menu called the palette we can access other menu by changing the first charcaracer in the entry field. Different providers are given distinguished by the prefix\n\n\t`prefix: HelpQuickAccessProvider.PREFIX`\n\n\nHere the prefix is `?`",
+      "line": 23
+    },
+    {
+      "file": "src/vs/platform/quickinput/browser/helpQuickAccess.ts",
+      "description": "What interest me is not the prefix even if I can create one for my quickpick but how to build a provider so I explore a example : `HelQuickAccessProvider`\nIt is different from the simplest way of giving an array of objects with label. Such an object being a degenerate `QuicPickItem`.",
+      "line": 17
+    },
+    {
+      "file": "src/vs/platform/quickinput/browser/helpQuickAccess.ts",
+      "description": "Such a provider class defines a `provide` method with `IHelpQuickAccessPickItem` which is an `ÌQuickPickItem` with a `prefix` field added",
+      "line": 28
+    }
+  ],
+  "ref": "cd8dfd268acd0babac40159ca3aa6cd24428d036"
+}
